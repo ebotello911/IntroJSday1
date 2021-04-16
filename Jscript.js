@@ -23,6 +23,7 @@ const getUserChoice = userInput =>{
     if(userChoice === computerChoice){
       return 'The game was a tie!'
     }
+
     if(userChoice === 'rock'){
       if(computerChoice === 'paper'){
       return 'The computer won!';
@@ -30,6 +31,7 @@ const getUserChoice = userInput =>{
       return 'You won!';
     }
     }
+
     if (userChoice === 'paper') {
       if (computerChoice === 'scissors'){ 
         return 'The computer won!';
@@ -37,6 +39,7 @@ const getUserChoice = userInput =>{
         return 'You won!';
       }
     }
+
     if(userChoice === 'scissors'){
       if(computerChoice === 'rock'){
         return 'The computer won!';
@@ -44,6 +47,7 @@ const getUserChoice = userInput =>{
          return 'You won!';
        }
     }
+    
     if(userChoice === 'bomb'){
       return 'You blew up the game! '
     }
@@ -54,7 +58,8 @@ const getUserChoice = userInput =>{
     // console.log(determineWinner('paper', 'rock'));
     
     const playGame = () =>{
-      const userChoice = getUserChoice('paper');
+      
+      const userChoice = window.prompt('Rock, Paper, Scissors');
       const computerChoice = getComputerChoice();
       console.log('You threw: ' + userChoice);
       console.log('The computer threw: ' + computerChoice);
